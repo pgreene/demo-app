@@ -1,7 +1,8 @@
 FROM ubuntu/nginx:latest
 USER root
 
-RUN apt-get -y update && apt-get install -y apt-utils gnupg2 software-properties-common net-tools curl git git-lfs wget unzip
+RUN apt-get -y update 
+RUN apt-get -y install apt-utils gnupg2 software-properties-common net-tools curl git git-lfs wget unzip
 RUN apt-get -y install percona-toolkit
 RUN apt-get -y install --no-install-recommends mysql-client*
 RUN apt-get -y install mariadb-client
