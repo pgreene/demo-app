@@ -13,7 +13,6 @@ RUN sudo echo "ubuntu ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/ubuntu
 RUN apt-get -y install percona-toolkit
 RUN apt-get -y install --no-install-recommends mysql-client*
 RUN apt-get -y install mariadb-client
-RUN apt-get -y install sqlite3
 RUN apt-get -y install groovy
 RUN apt-get -y install sudo
 RUN python3 -m pip install boto3
