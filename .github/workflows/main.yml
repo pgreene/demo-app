@@ -1,8 +1,9 @@
 name: Demo App Push
 on: 
   push: 
-    branches: [ "main" ]
-  
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   demo-app-dev:
     name: Build Docker Image
