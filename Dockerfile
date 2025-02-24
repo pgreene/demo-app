@@ -2,9 +2,6 @@ FROM ubuntu/nginx:latest
 USER root
 
 RUN apt-get -y update && apt-get install -y apt-utils gnupg2 software-properties-common net-tools curl git git-lfs wget unzip
-RUN echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> /etc/apt/sources.list
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
-RUN apt-get install python3-full python3-pip python3-setuptools python3-wheel --yes --quiet
 RUN apt-get -y install percona-toolkit
 RUN apt-get -y install --no-install-recommends mysql-client*
 RUN apt-get -y install mariadb-client
