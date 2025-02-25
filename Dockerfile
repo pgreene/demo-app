@@ -1,6 +1,6 @@
 FROM nginx
-COPY index.html /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/nginx.conf
+#COPY index.html /usr/share/nginx/html
+#COPY nginx.conf /etc/nginx/nginx.conf
 
 USER root
 
