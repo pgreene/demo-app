@@ -14,4 +14,4 @@ RUN apt-get -y install sudo
 RUN apt-get -y install php 
 
 EXPOSE 80/tcp
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]
