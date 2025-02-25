@@ -1,4 +1,5 @@
-FROM ubuntu/nginx:latest
+FROM mattrayner/lamp:latest-1804
+
 USER root
 
 RUN apt-get -y update 
