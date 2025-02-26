@@ -77,11 +77,11 @@ if(isset($_POST['submit']))
   firstname: <input type="text" name="name" value="<?php echo $firstname;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-  <span class="error">* <?php echo $emailErr;?></span>
-  <br><br>
   lastname: <input type="text" name="lastname" value="<?php echo $lastname;?>">
   <span class="error"><?php echo $lastnameErr;?></span>
+  <br><br>
+  email: <input type="text" name="email" value="<?php echo $email;?>">
+  <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
@@ -96,6 +96,7 @@ echo $lastname;
 echo "<br>";
 ?>
 
+Full List of Clients <br>
 <?php include 'view.php';?>
 </body>
 </html>
