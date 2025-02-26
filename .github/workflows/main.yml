@@ -39,6 +39,6 @@ jobs:
         - name: Update ECS service
           run: |
             IMAGE_TAG=$(echo $GITHUB_SHA | cut -c1-7)
-            ecs_service_update_command="aws ecs update-service --cluster ${{ secrets.ECS_CLUSTER_NAME }} --service ${{ secrets.ECS_SERVICE_NAME }} --force-new-deployment
+            ecs_service_update_command="aws ecs update-service --cluster ${{ secrets.ECS_CLUSTER_NAME }} --service ${{ secrets.ECS_SERVICE_NAME }} --force-new-deployment"
             echo "Updating ECS service..."
             eval $ecs_service_update_command
