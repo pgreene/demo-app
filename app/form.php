@@ -96,5 +96,6 @@ echo $lastname;
 echo "<br>";
 ?>
 
+<?php include 'view.php';?>
 </body>
 </html>
