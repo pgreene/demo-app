@@ -1,5 +1,10 @@
 # demo-app
-How to Deploy: Make a change then:
+
+## How to Deploy: 
+
+* Clone this repo.
+* Make a change to any file.
+* Then commit and push your changes.
 
 ```
 git add .
