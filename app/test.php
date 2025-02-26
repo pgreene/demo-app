@@ -1,16 +1,6 @@
+
 <?php
-$servername = "dev-demo-app-db.cluster-crczlgebnier.ca-central-1.rds.amazonaws.com";
-$username = "demoapp";
-$password = 'u:CmjP}Z$iHf04ml!GO0$$M[';
-$dbname = "demoappdb";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
+echo "remove connection so this can't run anymore";
 // sql to create table
 $sql = "CREATE TABLE clients (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,

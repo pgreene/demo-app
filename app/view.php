@@ -1,16 +1,5 @@
+<?php include 'connect.php';?>
 <?php
-$servername = "dev-demo-app-db.cluster-crczlgebnier.ca-central-1.rds.amazonaws.com";
-$username = "demoapp";
-$password = 'u:CmjP}Z$iHf04ml!GO0$$M[';
-$dbname = "demoappdb";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
 $sql = "SELECT id, firstname, lastname FROM clients";
 $result = $conn->query($sql);
 
