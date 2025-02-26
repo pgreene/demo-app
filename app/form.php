@@ -50,8 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $lastname = test_input($_POST["lastname"]);
     // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$lastname)) {
-      $lastnameErr = "Invalid URL";
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$lastname)) {
+        $lastnameErr = "Only letters and white space allowed";
     }
   }
 }
