@@ -10,5 +10,5 @@ $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
   die("Connection failed ... sad. : " . $conn->connect_error);
 }
-echo "Connected to RDS successfully";
+echo "Connected to RDS successfully ... happy. )";
 ?>
