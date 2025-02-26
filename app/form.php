@@ -61,7 +61,7 @@ if(isset($_POST['submit']))
 }
 ?>
 
-<h2>PHP Form Validation Example</h2>
+<h2>Enter New Client Details</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   firstname: <input type="text" name="name" value="<?php echo $firstname;?>">
@@ -80,13 +80,14 @@ if(isset($_POST['submit']))
 echo "<h2>Your Input:</h2>";
 echo $firstname;
 echo "<br>";
-echo $email;
-echo "<br>";
 echo $lastname;
+echo "<br>";
+echo $email;
 echo "<br>";
 ?>
 
-Full List of Clients <br>
+<h2>Full List of Clients</h2> 
+<br>
 <?php include 'view.php';?>
 </body>
 </html>
