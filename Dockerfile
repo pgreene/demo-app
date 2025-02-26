@@ -16,4 +16,4 @@ COPY --chown=nginx /app /var/www/html
 ##RUN apt-get -y install php php-cli php-mysql php-xml php-fpm php-mbstring php-zip php-zlib php-pear php-curl php-dom php-xml php-intl php-mbstring php-soap php-tokenizer php-xml
 #RUN apt-get -y install php 
 
-EXPOSE 80/tcp
+EXPOSE 8080/tcp
