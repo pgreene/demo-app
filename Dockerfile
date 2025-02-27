@@ -17,7 +17,7 @@ FROM trafex/php-nginx:latest
 #RUN apt-get -y install php 
 
 #RUN apk -y update 
-RUN apk add --update alpine-sdk libxml2-dev libxslt-dev libffi-dev zlib-dev python-dev py-pip
+RUN apk add --update zlib-dev
 #RUN apk add --update zlib1g-dev libzip-dev unzip
 RUN docker-php-ext-install zip
 COPY --from=composer /usr/bin/composer /usr/bin/composer
