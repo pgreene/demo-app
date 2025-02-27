@@ -87,7 +87,6 @@ echo "<br>";
 ?>
 
 <h2>Clients</h2> 
-<br>
 <?php include 'view.php';?>
 </body>
 </html>
