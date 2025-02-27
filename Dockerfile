@@ -1,7 +1,7 @@
 #FROM nginx
 FROM trafex/php-nginx:latest
 #COPY --chown=nginx --from=composer /app /var/www/html
-COPY --chown=nginx /app /var/www/html
+
 #COPY index.html /usr/share/nginx/html
 #COPY nginx.conf /etc/nginx/nginx.conf
 
@@ -15,5 +15,13 @@ COPY --chown=nginx /app /var/www/html
 #RUN apt-get -y install sudo
 ##RUN apt-get -y install php php-cli php-mysql php-xml php-fpm php-mbstring php-zip php-zlib php-pear php-curl php-dom php-xml php-intl php-mbstring php-soap php-tokenizer php-xml
 #RUN apt-get -y install php 
+
+RUN apt-get update && apt-get install -y zlib1g-dev libzip-dev unzip
+RUN docker-php-ext-install zip
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+RUN composer self-update
+WORKDIR /var/www/html
+COPY --chown=nginx /app /var/www/html
+CMD bash -c "composer install && php retrieve.php"
 
 EXPOSE 8080/tcp
