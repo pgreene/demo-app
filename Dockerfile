@@ -16,7 +16,8 @@ FROM trafex/php-nginx:latest
 ##RUN apt-get -y install php php-cli php-mysql php-xml php-fpm php-mbstring php-zip php-zlib php-pear php-curl php-dom php-xml php-intl php-mbstring php-soap php-tokenizer php-xml
 #RUN apt-get -y install php 
 
-RUN apt-get update && apt-get install -y zlib1g-dev libzip-dev unzip
+RUN apt-get -y update 
+RUN apt-get -y install zlib1g-dev libzip-dev unzip
 RUN docker-php-ext-install zip
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 RUN composer self-update
