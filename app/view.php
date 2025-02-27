@@ -1,6 +1,6 @@
 <?php include 'connect.php';?>
 <?php
-$sql = "SELECT DISTINCT ON (firstname, lastname) firstname, lastname, email FROM clients WHERE firstname IS NOT NULL OR lastname IS NOT NULL ORDER BY lastname";
+$sql = "SELECT DISTINCT firstname, lastname FROM clients WHERE firstname IS NOT NULL ORDER BY lastname";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
