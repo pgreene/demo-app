@@ -1,5 +1,7 @@
 # demo-app
 
+Currently infrastructure is not deployed for this demo app to save on costs. It can be spun up in minutes and taken down again without losing any changes. Fully automated. 
+
 ## How to Deploy: 
 
 * Clone this repo.
